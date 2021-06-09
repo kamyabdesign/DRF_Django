@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+     <div class="row d-block">
+          {% for article in object_list %}
+          <div>
+               <h1>{{ article.title }}</h1>
+          </div>
+
+          <div class="stronge">
+               <h3>{{ article.author }}</h3>
+          </div>
+          <span>
+               <h6>{{ article.publish }}</h6>
+          </span>
+          <p>{{ article.content }}</p>
+          <hr>
+          {% empty %}
+          <div class="h2">
+               <p>there is no topic for showing !!</p>
+          </div>
+          {% endfor %}
+     </div>
+</div>
+{% endblock content %}
