@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+     <div class="row d-block">
+
+          <div>
+               <h1>{{ object.title }}</h1>
+          </div>
+
+          <div class="stronge">
+               <h3>{{ object.author }}</h3>
+          </div>
+          <span>
+               <h6>{{ object.publish }}</h6>
+          </span>
+          <p>{{ object.content | linebreaks }}</p>
+
+
+     </div>
+</div>
+{% endblock content %}
